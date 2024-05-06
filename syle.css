@@ -5,6 +5,18 @@
   font-family: 'Poppins', sans-serif;
 }
 
+.background-container {
+  background-image: url('grass.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
 body {
   display: flex;
   align-items: center;
@@ -89,6 +101,7 @@ h1 {
   display: flex; 
   align-items: center; 
   justify-content: center; 
+  
 }
 
 #buttonsContainer {
@@ -177,4 +190,111 @@ h1 {
 .pet-selection h2 {
   margin-bottom: 12px; 
   font-size: 1.2em; 
+}
+
+/*Event Handling*/
+
+.event-item {
+  margin-top: 10px;
+}
+
+.event-item strong {
+  font-weight: bold;
+}
+
+.remove-event {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+/* Event Section */
+#eventSection {
+  position: absolute;
+  top: 50%;
+  right: 14%; 
+  transform: translateY(-50%);
+  height: 500px; 
+  width: 185px; 
+  padding: 20px;
+  border-radius: 18px;
+  border: 2px solid #ccc;
+  background-color: tan;
+  box-shadow: 0 2.4px 4.8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+#eventForm {
+  margin-bottom: 20px;
+}
+
+.event-item {
+  background-color: #c0c0c0;
+  border-radius: 12px;
+  padding: 5px 10px;
+  margin-top: 5px;
+}
+
+.event-item strong {
+  font-weight: bold;
+}
+
+
+#eventSection h3 {
+  margin-bottom: 20px;
+}
+
+.remove-event {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+#addEventButton {
+  background-color: white; 
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+.has-event {
+  position: relative;
+}
+
+.has-event::after {
+  content: '';
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  width: 8px;
+  height: 8px;
+  background-color: brown;
+  border-radius: 50%;
+}
+
+.event-dot {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  width: 10px;
+  height:10px;
+  background-color: brown;
+  border-radius: 50%;
 }

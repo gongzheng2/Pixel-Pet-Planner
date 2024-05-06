@@ -7,45 +7,61 @@
 <link rel="stylesheet" href="syle.css">
 </head>
 <body>
-  <img src="Capture.PNG" alt="Pixel Pet Planner" style="width: 600px;">
-  <div class="container">
 
-    <div class="calendar-and-buttons">
-      <div class="calendar-container">
+<img src="Capture.PNG" alt="Pixel Pet Planner" style="width: 600px;">
+<div class="container">
 
-        <div class="header">
-          <button id="prevMonth">&lt;</button>
-          <h2 id="currentMonth"></h2>
-          <button id="nextMonth">&gt;</button>
-        </div>
+  <div class="calendar-and-buttons">
+    <div class="calendar-container">
 
-        <div id="calendarBody" class="calendar-body">
-        </div>
-        </div>
-
-      <div id="buttonsContainer">
-        <button id="playButton" class="menu-button">Play</button>
-        <button id="feedButton" class="menu-button">Feed</button>
+      <div class="header">
+        <button id="prevMonth">&lt;</button>
+        <h2 id="currentMonth"></h2>
+        <button id="nextMonth">&gt;</button>
       </div>
+
+      <div id="calendarBody" class="calendar-body">
       </div>
       </div>
 
-  <div class="pet-selection">
-    <h2>Pet Selection:</h2>
-    <div class="pet-box" id="baseBox" onclick="selectPet('base')">
-      <img src="base_idle.gif" alt="Base" width="100" height="100">
+    <div id="buttonsContainer">
+      <button id="playButton" class="menu-button">Play</button>
+      <button id="feedButton" class="menu-button">Feed</button>
+    </div>
+    </div>
     </div>
 
-    <div class="pet-box" id="dogBox" onclick="selectPet('dog')">
-      <img src="dog_idle.gif" alt="Dog" width="100" height="100">
-    </div>
+<div class="pet-selection">
+  <h2>Pet Selection:</h2>
+  <div class="pet-box" id="baseBox" onclick="selectPet('base')">
+    <img src="base_idle.gif" alt="Base" width="100" height="100">
+  </div>
 
-    <div class="pet-box" id="catBox" onclick="selectPet('cat')">
-      <img src="calico_idle.gif" alt="Cat" width="100" height="100">
+  <div class="pet-box" id="dogBox" onclick="selectPet('dog')">
+    <img src="dog_idle.gif" alt="Dog" width="100" height="100">
+  </div>
+
+  <div class="pet-box" id="catBox" onclick="selectPet('cat')">
+    <img src="calico_idle.gif" alt="Cat" width="100" height="100">
+  </div>
+</div>
+
+<div id="eventSection">
+  <h3>Events:</h3>
+  <div id="eventForm">
+    <button id="addEventButton" class="menu-button">Add Event</button>
+    <div id="eventMenu" class="hidden">
+      <input type="text" id="eventName" placeholder="Event Name">
+      <input type="date" id="eventDate">
+      <button id="confirmEventButton" class="menu-button">Confirm</button>
     </div>
-    </div>
-    </div>
+  </div>
+
+  <div id="eventList">
     
-  <script src="script.js"></script>
+  </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
