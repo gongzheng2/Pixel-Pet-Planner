@@ -1,0 +1,180 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 10px; 
+  justify-content: center;
+  min-height: 100vh;
+  background: white;
+}
+
+h1 {
+  margin-bottom: 24px; 
+  font-size: 1.2em; 
+}
+
+.calendar-container {
+  border-radius: 18px; 
+  border: 2px solid #ccc; 
+  background-color: hsl(0, 0%, 87%);
+  box-shadow: 0 2.4px 4.8px rgba(0, 0, 0, 0.1); 
+  padding: 20px; 
+  margin: 20px auto; 
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px; 
+  margin-top: 12px; 
+}
+
+.calendar-body {
+  display: flex;
+}
+
+.day-name {
+  text-align: center;
+  padding: 10px; 
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: 1px solid #ccc;
+  border-radius: 10px; 
+  background-color: #fff;
+}
+
+#prevMonth,
+#nextMonth {
+  background-color: tan;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#prevMonth:hover,
+#nextMonth:hover {
+  background-color: hsl(273, 4%, 58%);
+}
+
+#calendarBody {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px; 
+}
+
+.currentMonth {
+  background-color: #fff;
+}
+
+.date {
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  background-color: #c0c0c0;
+  width: 120px;
+  height: 120px;
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+}
+
+#buttonsContainer {
+  position: center;
+  top: 20px; 
+  right: 20px; 
+}
+
+.date:hover #buttonsContainer { 
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+}
+
+.date {
+  position: relative;
+}
+
+.calendar-container {
+  position: relative; 
+}
+
+
+
+/* Pets and Pet Interactions */
+
+.date img {
+  max-width: 100%; 
+  max-height: 100%; 
+  border-radius: 12px; 
+}
+
+.date span {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 0.8em;
+  color: black;
+}
+
+
+.menu-button {
+  background-color: tan;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.menu-container {
+  position: relative; 
+}
+
+.pet-selection {
+  position: absolute;
+  top: 50%;
+  left: 15%;
+  height: 500px;
+  transform: translateY(-50%);
+  padding: 20px;
+  border-radius: 18px;
+  border: 2px solid #ccc;
+  background-color: tan;
+  box-shadow: 0 2.4px 4.8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pet-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.pet-box img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.pet-selection h2 {
+  margin-bottom: 12px; 
+  font-size: 1.2em; 
+}
