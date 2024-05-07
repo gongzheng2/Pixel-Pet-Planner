@@ -116,8 +116,21 @@ function toggleEventMenu() {
 }
 
 const confirmEventButton = document.getElementById('confirmEventButton');
-confirmEventButton.addEventListener('click', addEvent);
 
+
+function deleteEvent(eventItem){
+  eventItem.remove();
+
+  const eventDate = eventItem.textContent.split("-")[1];
+  const dateBox = document.querySelector('.date[data-day="${eventDate}"]');
+
+  const dot = dateBox.querySelector('.event-dot');
+  if (dot) {
+    dot.remove();
+  }
+}
+
+confirmEventButton.addEventListener('click', addEvent);
 function addEvent() {
   const eventName = document.getElementById('eventName').value;
   const eventDate = document.getElementById('eventDate').value;
@@ -127,6 +140,12 @@ function addEvent() {
   eventItem.textContent = `${eventName} - ${eventDate}`;
   eventItem.classList.add('event-item');
   eventList.appendChild(eventItem);
+
+  const deleteButton = document.createElement('button');
+  deleteButton.textContent = 'Delete';
+  deleteButton.classList.add('delete-button');
+  deleteButton.addEventListener('click',()=>deleteEvent(eventItem));
+  eventList.appendChild(deleteButton);
 
   const dateBox = document.querySelector(`.date[data-day="${eventDate}"]`);
   if (dateBox) {
